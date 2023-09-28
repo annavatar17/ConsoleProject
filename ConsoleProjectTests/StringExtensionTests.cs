@@ -9,7 +9,7 @@ namespace ConsoleProjectTests
         [TestMethod]
         public void IsMatchBrackets_GivenMatchBrackets_ShouldReturnTrue()
         {
-            string str = "<>";
+            var str = "<>";
             bool isMatch = StringExtension.IsMatchBrackets(str);
 
             Assert.IsTrue(isMatch);
@@ -18,7 +18,7 @@ namespace ConsoleProjectTests
         [TestMethod]
         public void IsMatchBrackets_GivenCloseBracketBeforeOpenBracket_ShouldReturnFalse()
         {
-            string str = "><";
+            var str = "><";
             bool isMatch = StringExtension.IsMatchBrackets(str);
 
             Assert.IsFalse(isMatch);
@@ -27,7 +27,7 @@ namespace ConsoleProjectTests
         [TestMethod]
         public void IsMatchBrackets_GivenUnclosedBracket_ShouldReturnFalse()
         {
-            string str = "<<>";
+            var str = "<<>";
             bool isMatch = StringExtension.IsMatchBrackets(str);
 
             Assert.IsFalse(isMatch);
@@ -36,7 +36,7 @@ namespace ConsoleProjectTests
         [TestMethod]
         public void IsMatchBrackets_GivenNoBrackets_ShouldReturnTrue()
         {
-            string str = "\"\"_";
+            var str = "\"\"_";
             bool isMatch = StringExtension.IsMatchBrackets(str);
 
             Assert.IsTrue(isMatch);
@@ -45,7 +45,7 @@ namespace ConsoleProjectTests
         [TestMethod]
         public void IsMatchBrackets_GivenMatchBracketsWithExtraCharacters_ShouldReturnTrue()
         {
-            string str = "<abc...xyz>";
+            var str = "<abc...xyz>";
             bool isMatch = StringExtension.IsMatchBrackets(str);
 
             Assert.IsTrue(isMatch);
@@ -54,7 +54,7 @@ namespace ConsoleProjectTests
         [TestMethod]
         public void IsMatchBrackets_GivenOnlyCloseBracket_ShouldReturnFalse()
         {
-            string str = ">";
+            var str = ">";
             bool isMatch = StringExtension.IsMatchBrackets(str);
 
             Assert.IsFalse(isMatch);
