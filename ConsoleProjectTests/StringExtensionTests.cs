@@ -50,5 +50,14 @@ namespace ConsoleProjectTests
 
             Assert.IsTrue(isMatch);
         }
+
+        [TestMethod]
+        public void IsMatchBrackets_GivenOnlyClosedBracket_ShouldReturnFalse()
+        {
+            string str = ">";
+            bool isMatch = StringExtension.IsMatchBrackets(str);
+
+            Assert.IsFalse(isMatch);
+        }
     }
 }

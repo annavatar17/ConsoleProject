@@ -10,6 +10,7 @@ namespace ConsoleProject
 
             foreach (var character in str)
             {
+
                 if (character == '<')
                 {
                     stack.Push(character);
@@ -17,6 +18,10 @@ namespace ConsoleProject
                 else if (stack.Count > 0 && character == '>')
                 {
                     stack.Pop();
+                }
+                else if (stack.Count == 0 && character == '>')
+                {
+                    return false;
                 }
             }
 
