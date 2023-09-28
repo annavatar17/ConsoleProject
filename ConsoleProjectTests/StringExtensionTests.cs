@@ -52,7 +52,7 @@ namespace ConsoleProjectTests
         }
 
         [TestMethod]
-        public void IsMatchBrackets_GivenOnlyClosedBracket_ShouldReturnFalse()
+        public void IsMatchBrackets_GivenOnlyCloseBracket_ShouldReturnFalse()
         {
             string str = ">";
             bool isMatch = StringExtension.IsMatchBrackets(str);

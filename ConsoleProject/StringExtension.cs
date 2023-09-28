@@ -10,7 +10,6 @@ namespace ConsoleProject
 
             foreach (var character in str)
             {
-
                 if (character == '<')
                 {
                     stack.Push(character);
